@@ -18,7 +18,6 @@ namespace WebApplication1.Controllers
         [HttpPost("send")]
         public IActionResult SendEmail([FromBody] EmailservicesDto request)
         {
-
             _emailServiceRepository.SendEmail(request);
             return Ok(new { Message = "Email sent successfully", Request = request });
         }
