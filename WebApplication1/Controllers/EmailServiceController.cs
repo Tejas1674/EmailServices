@@ -18,8 +18,7 @@ namespace WebApplication1.Controllers
         [HttpPost("send")]
         public IActionResult SendEmail([FromBody] EmailservicesDto request)
         {
-            // Here you would add your email sending logic
-            // For demonstration, we'll just return a success response
+
             _emailServiceRepository.SendEmail(request);
             return Ok(new { Message = "Email sent successfully", Request = request });
         }
